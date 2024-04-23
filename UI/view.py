@@ -76,3 +76,9 @@ class View(ft.UserControl):
 
     def update_page(self):
         self._page.update()
+
+    def print_umidita_media(self, output):
+        self.lst_result.controls.append(ft.Text(f"L'umidità media nel mese selezionato è:"))
+        for localita in output.keys():
+            self.lst_result.controls.append(ft.Text(f"{localita}: {output[localita]}"))
+        self._page.update()
