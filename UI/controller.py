@@ -28,7 +28,7 @@ class Controller:
             self._view.print_umidita_media(output)
 
     def handle_sequenza(self, e):
-        self._model.sequenza_ricorsiva(self._mese, 0)
+        self._model.trova_sequenza(self._mese)
 
     def read_mese(self, e):
         self._mese = int(e.control.value)
